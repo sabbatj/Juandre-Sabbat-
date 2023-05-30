@@ -450,12 +450,12 @@
                 </div>
             </div>
         </section>
-                 <script>
-        function showMessage() {
-            var messageElement = document.getElementById("message");
-            messageElement.style.display = "block";
-            messageElement.textContent = "Thanks for getting in touch! Will reply ASAP!";
-        }
+          <script>
+        var form = document.querySelector('.contact-form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.href = this.action;
+        });
     </script>
     </main>
 
